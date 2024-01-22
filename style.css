@@ -10,6 +10,9 @@ body {
   overflow: auto;
 }
 
+.bg-img{
+  display: none;
+}
 
 .bg-animations {
   position: relative;

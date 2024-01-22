@@ -1,15 +1,15 @@
-// for hover effect
+// for hover effect boxes
 
 const bgAnimations = document.getElementById("bg-animations");
 
-        const numberOfColorBoxes = 400;
+const numberOfColorBoxes = 400;
 
-        for (let i = 0; i < numberOfColorBoxes; i++) {
-            const colorBox = document.createElement("div");
+for (let i = 0; i < numberOfColorBoxes; i++) {
+    const colorBox = document.createElement("div");
 
-            colorBox.classList.add("color-box");
-            bgAnimations.append(colorBox);
-        }
+    colorBox.classList.add("color-box");
+    bgAnimations.append(colorBox);
+}
 
 
 // For Hamburger navigation
@@ -18,40 +18,41 @@ let burger = document.getElementById("burg");
 
 burger.addEventListener("click", () => {
     console.log("burger clicked") //just to check
-        document.querySelector(".navv").style.display = "flex";
-        document.querySelector(".navigation").style.height = "100vh";
-        document.querySelector("#burg").style.display = "none";
-        document.querySelector(".close").style.display = "block";
-        document.querySelector("body").style.overflow = "hidden";
+    document.querySelector(".navv").style.display = "flex";
+    document.querySelector(".navigation").style.height = "100vh";
+    document.querySelector("#burg").style.display = "none";
+    document.querySelector(".close").style.display = "block";
+    document.querySelector("body").style.overflow = "hidden";
 });
 
 let clos = document.getElementById("closed");
 
-clos.addEventListener("click", ()=>{
-    document.querySelector("#burg").style.display = "block";
+clos.addEventListener("click", () => {
     document.querySelector(".navv").style.display = "none";
     document.querySelector(".navigation").style.height = "auto";
+    document.querySelector("#burg").style.display = "block";
     document.querySelector(".close").style.display = "none";
     document.querySelector("body").style.overflow = "auto";
     console.log("check close")
 })
 
-// Get all list items inside the navigation
-// let navItems = document.querySelectorAll('.nav-ul li');
 
-// Add click event listener to each list item
-// navItems.forEach(item => {
-//     item.addEventListener('click', () => {
-//         document.querySelector(".navv").style.display = "none";
-//         document.querySelector(".navigation").style.height = "auto";
-//         document.querySelector("#burg").style.display = "block";
-//         document.querySelector(".close").style.display = "none";
-//         document.querySelector("body").style.overflow = "auto";
-//     });
-// });
 
-// click event listener to li only mob view
-if (window.innerWidth <= 768) { 
+
+// when we click on any li navigation shoud get hide, JS for that
+let navItems = document.querySelectorAll('.nav-ul li');
+
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelector(".navv").classList.add("hidden");
+        document.querySelector(".navigation").classList.remove("expanded");
+        document.querySelector("#burg").classList.remove("hidden");
+        document.querySelector(".close").classList.add("hidden");
+        document.querySelector("body").classList.remove("no-overflow");
+    });
+});
+
+if (window.innerWidth <= 768) {
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             document.querySelector(".navv").style.display = "none";
@@ -62,6 +63,9 @@ if (window.innerWidth <= 768) {
         });
     });
 }
+
+
+
 
 // For Major and small projects tab
 
@@ -85,7 +89,7 @@ buttonn.addEventListener("click", () => {
 let rdButtons = document.getElementsByClassName("read-btn");
 
 for (let i = 0; i < rdButtons.length; i++) {
-    rdButtons[i].addEventListener("click", function() {
+    rdButtons[i].addEventListener("click", function () {
         console.log("to check read btn");
 
         let readMore = this.parentElement.querySelector(".read-more");
@@ -98,33 +102,10 @@ for (let i = 0; i < rdButtons.length; i++) {
     });
 }
 
-// For contact form
-
-const form = document.querySelector("#form")
-        const submitButton = document.querySelector("#contact-btn")
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbysYX7eEm9rFvP-SN-MoyXIC0tLZZ-efWX9EEncmE5XA3GekLbnSMcdBVfE6nivL_vh/exec'
-
-        form.addEventListener('submit', e => {
-            console.log("Working...");
-            submitButton.disabled = true
-            e.preventDefault()
-            let requestBody = new FormData(form)
-            fetch(scriptURL, { method: 'POST', body: requestBody })
-                .then(response => {
-                    alert('Thank you!!! For quick response you can call/mail me', response)
-                    submitButton.disabled = false
-                })
-                .catch(error => {
-                    alert('Error!', error.message)
-                    submitButton.disabled = false
-
-                }
-                )
-        })
 
 // For Top arrow function
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let topArrow = document.getElementById("topArrow");
 
     topArrow.addEventListener("click", () => {
@@ -135,3 +116,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+
+

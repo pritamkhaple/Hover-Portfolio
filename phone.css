@@ -4,8 +4,25 @@
         padding: 0;
     }
 
+    .hidden {
+        display: none;
+    }
+    
+    .expanded {
+        height: auto;
+    }
+    
+    .no-overflow {
+        overflow: auto;
+    }
+
     .bg-animations{
-        height: 50vh;
+        /* height: 50vh; */
+        display: none;
+    }
+
+    .bg-img{
+        display: block;
     }
 
     #closed {
@@ -144,10 +161,9 @@
 
     .read-btn {
         padding: 0.3rem;
-        border: 1px solid blueviolet;
-        background-color: blueviolet;
-        color: white;
-        border-radius: 1rem;
+        border-bottom: 1px solid red;
+        background-color: transparent;
+        color: red;
         margin: 1rem;
         display: flex;
     }
@@ -159,6 +175,7 @@
 
     .small-proj1 {
         width: 70%;
+        padding: 2rem 0;
     }
 
     .proj-info h3 {
@@ -174,6 +191,7 @@
 
     .proj-info ul li {
         width: 100%;
+        margin: 0;
     }
 
 
