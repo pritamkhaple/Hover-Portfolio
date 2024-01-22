@@ -1,3 +1,3 @@
 # New-Portfolio
 
-https://pritam-khaple-portfolio.netlify.app/
+https://pritam-khaple.netlify.app/
