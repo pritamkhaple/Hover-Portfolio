@@ -15,27 +15,25 @@ for (let i = 0; i < numberOfColorBoxes; i++) {
 // For Hamburger navigation
 
 let burger = document.getElementById("burg");
+let close = document.getElementById("closed");
+let navv = document.querySelector(".navv");
+let navigation = document.querySelector(".navigation");
 
 burger.addEventListener("click", () => {
-    console.log("burger clicked") //just to check
-    document.querySelector(".navv").style.display = "flex";
-    document.querySelector(".navigation").style.height = "100vh";
-    document.querySelector("#burg").style.display = "none";
-    document.querySelector(".close").style.display = "block";
-    document.querySelector("body").style.overflow = "hidden";
+    navv.style.display = "flex";
+    navigation.style.height = "100vh";
+    burger.style.display = "none";
+    close.style.display = "block";
+    document.body.style.overflow = "hidden";
 });
 
-let clos = document.getElementById("closed");
-
-clos.addEventListener("click", () => {
-    document.querySelector(".navv").style.display = "none";
-    document.querySelector(".navigation").style.height = "auto";
-    document.querySelector("#burg").style.display = "block";
-    document.querySelector(".close").style.display = "none";
-    document.querySelector("body").style.overflow = "auto";
-    console.log("check close")
-})
-
+close.addEventListener("click", () => {
+    navv.style.display = "none";
+    navigation.style.height = "auto";
+    burger.style.display = "block";
+    close.style.display = "none";
+    document.body.style.overflow = "auto";
+});
 
 
 
@@ -44,27 +42,21 @@ let navItems = document.querySelectorAll('.nav-ul li');
 
 navItems.forEach(item => {
     item.addEventListener('click', () => {
-        document.querySelector(".navv").classList.add("hidden");
-        document.querySelector(".navigation").classList.remove("expanded");
-        document.querySelector("#burg").classList.remove("hidden");
-        document.querySelector(".close").classList.add("hidden");
-        document.querySelector("body").classList.remove("no-overflow");
-    });
-});
-
-if (window.innerWidth <= 768) {
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
             document.querySelector(".navv").style.display = "none";
             document.querySelector(".navigation").style.height = "auto";
             document.querySelector("#burg").style.display = "block";
             document.querySelector(".close").style.display = "none";
             document.querySelector("body").style.overflow = "auto";
-        });
+        } else {
+            document.querySelector(".navv").classList.add("hidden");
+            document.querySelector(".navigation").classList.remove("expanded");
+            document.querySelector("#burg").classList.remove("hidden");
+            document.querySelector(".close").classList.add("hidden");
+            document.querySelector("body").classList.remove("no-overflow");
+        }
     });
-}
-
-
+});
 
 
 // For Major and small projects tab

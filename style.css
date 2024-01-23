@@ -38,7 +38,7 @@ body {
 }
 
 .color-box:hover {
-  background: gold;
+  background: blueviolet;
   transition-duration: 0s;
 }
 
@@ -138,7 +138,7 @@ body {
 
 .nav-ul li a:hover {
   /* border-bottom: 1px solid white; */
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid blueviolet;
   cursor: pointer;
   transition-duration: 1s;
 }
@@ -209,7 +209,7 @@ body {
   padding: 0.2rem;
   margin: 1rem 0;
   display: inline-block;
-  border: 1px solid gold;
+  border: 1px solid blueviolet;
   width: 2.4rem;
   border-radius: 0.4rem;
   transition: 1s;
@@ -230,7 +230,7 @@ body {
 }
 
 .btn-2:hover {
-  background-color: gold;
+  background-color: blueviolet;
   color: white;
   border: 1px solid yellow;
   transform: scale(1.1);
@@ -238,7 +238,7 @@ body {
 
 .btnn:hover {
   transition: 1s;
-  background-color: gold;
+  background-color: blueviolet;
   border: 1px solid;
   border: 1px solid blueviolet;
   transform: scale(1.1);
@@ -257,7 +257,7 @@ body {
 
 .btn-2 a {
   text-decoration: none;
-  color: gold;  
+  color: blueviolet;  
   /* margin: 0.5rem; */
   display: flex;
   justify-content: center;
@@ -397,10 +397,10 @@ body {
 .typ:active,
 .typ:focus {
   /* border-bottom: 1px solid white; */
-  border: 1px solid gold;
+  border: 1px solid blueviolet;
   transition: 1s;
   padding: 6px;
-  color: gold;
+  color: blueviolet;
 }
 
 .typ::selection {
@@ -484,7 +484,7 @@ body {
 /* .proj-btn a {
     text-decoration: none;
     color: white;
-    border: 1px solid gold;
+    border: 1px solid blueviolet;
     border-radius: 5px;
     padding: 0.5rem;
     width: 3rem;
